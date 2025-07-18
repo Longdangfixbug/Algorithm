@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+
+// Complexity time: O(log n)
+
+
 int Binary_Search(int a[],int x,int l, int r){
     int mid = (r+l)/2;
     while (l < r){
-        if (mid == x){
+        if (a[mid] == x){
             return mid;
         }
-        else if (mid < x){
+        else if (a[mid] < x){
             l = mid + 1;
         }
         else {
@@ -17,4 +22,7 @@ int Binary_Search(int a[],int x,int l, int r){
     return -1;
 
 
+}
+int main(){
+    
 }
