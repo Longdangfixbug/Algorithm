@@ -6,7 +6,7 @@ using namespace std;
 
 
 int Binary_Search(int a[],int x,int l, int r){
-    int mid = (r+l)/2;
+    int mid = l + (r - l)/2;
     while (l <= r){
         if (a[mid] == x){
             return mid;
@@ -17,7 +17,7 @@ int Binary_Search(int a[],int x,int l, int r){
         else {
             r = mid - 1;
         }
-        mid = (l+r)/2;
+        mid = l + (r - l)/2;
      }
     return -1;
 
